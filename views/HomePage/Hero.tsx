@@ -12,18 +12,15 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>the coolest, saas product you have ever seen</CustomOverTitle>
-        <Heading>Make your life easier with our SaaS</Heading>
+        <CustomOverTitle>GET A VERIFIED FLIGHT ITINERARY WITHIN 60 SECONDS</CustomOverTitle>
+        <Heading>Generate your flight itinerary for free</Heading>
         <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora qui. Explicabo voluptate iure ipsum molestias
-          repudiandae perspiciatis nostrum praesentium, unde pariatur tempora magni rem. Necessitatibus facilis obcaecati ratione.
+          Quickly book a Flight Reservation for your Visa Application. It is no longer necessary to use Photoshop, just enter the flight details!
         </Description>
         <CustomButtonGroup>
-          <NextLink href="#whitepaper" passHref>
-            <Button transparent>
-              Features <span>&rarr;</span>
-            </Button>
-          </NextLink>
+          <Button>
+            Book Now <span>&rarr;</span>
+          </Button>
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
@@ -91,7 +88,7 @@ const CustomOverTitle = styled(OverTitle)`
 `;
 
 const Heading = styled.h1`
-  font-size: 7.2rem;
+  font-size: 5.8rem;
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: 4rem;
