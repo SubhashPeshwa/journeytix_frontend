@@ -92,6 +92,7 @@ const FeaturesGalleryWrapper = styled(Container)`
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  margin-top: 10rem;
 `;
 
 const GalleryWrapper = styled.div`

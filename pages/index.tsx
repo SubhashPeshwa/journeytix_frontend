@@ -9,13 +9,12 @@ import Link from 'components/Link';
 import Cta from 'views/HomePage/Cta';
 import FeaturesGallery from 'views/HomePage/FeaturesGallery';
 import Features from 'views/HomePage/Features';
-import ScrollableBlogPosts from 'views/HomePage/ScrollableBlogPosts';
+// import ScrollableBlogPosts from 'views/HomePage/ScrollableBlogPosts';
 import { getAllPosts } from 'utils/postsFetcher';
-import Testimonials from 'views/HomePage/Testimonials';
+// import Testimonials from 'views/HomePage/Testimonials';
 import { EnvVars } from 'env';
 
-// const Home: NextPage = () => {
-//   return (
+
 export default function Homepage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
       <>
@@ -30,7 +29,7 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
         <WhiteBackgroundContainer>
           <Hero />
           {/* <Partners /> */}
-          <BasicSection imageUrl="/demo-illustration-1.svg" title="Generate onward or return flight itinerary for free." overTitle="sit amet gogo">
+          {/* <BasicSection imageUrl="/demo-illustration-1.svg" title="Generate onward or return flight itinerary for free." overTitle="sit amet gogo">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem error incidunt a doloremque voluptatem porro inventore
               voluptate quo deleniti animi laboriosam.{' '}
@@ -49,12 +48,12 @@ export default function Homepage({ posts }: InferGetStaticPropsType<typeof getSt
               <li>Professional remark 2</li>
               <li>Professional feature 3</li>
             </ul>
-          </BasicSection>
+          </BasicSection> */}
         </WhiteBackgroundContainer>
         <DarkerBackgroundContainer>
-          <Cta />
+          {/* <Cta /> */}
           <FeaturesGallery />
-          <Features />
+          {/* <Features /> */}
           {/* <Testimonials /> */}
           {/* <ScrollableBlogPosts posts={posts} /> */}
         </DarkerBackgroundContainer>
@@ -78,10 +77,12 @@ const DarkerBackgroundContainer = styled.div`
 `;
 
 const WhiteBackgroundContainer = styled.div`
-  background: rgb(var(--secondBackground));
+  // background: rgb(var(--secondBackground));
+  background: rgb(var(--background));
 
   & > :last-child {
-    padding-bottom: 15rem;
+    padding-bottom: 5rem;
+    padding-top: 10rem;
   }
 
   & > *:not(:first-child) {

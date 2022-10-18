@@ -20,10 +20,8 @@ const footerItems: FooterItems = [
   {
     title: 'Product',
     items: [
-      { title: 'Features', href: '/features' },
-      { title: 'Something', href: '/something' },
-      { title: 'Something else', href: '/something-else' },
-      { title: 'And something else', href: '/and-something-else' },
+      { title: 'Generate Itinerary', href: '/features' },
+      { title: 'Itinerary Features', href: '/something' },
     ],
   },
   {
@@ -32,18 +30,17 @@ const footerItems: FooterItems = [
       { title: 'Blog', href: '/blog' },
       { title: 'Contact', href: '/contact' },
       { title: 'FAQ', href: '/faq' },
-      { title: 'Help Center', href: '/help-center' },
     ],
   },
-  {
-    title: 'Something',
-    items: [
-      { title: 'Features2', href: '/features2' },
-      { title: 'Something2', href: '/something2' },
-      { title: 'Something else2', href: '/something-else2' },
-      { title: 'And something else2', href: '/and-something-else2' },
-    ],
-  },
+  // {
+  //   title: 'Something',
+  //   items: [
+  //     { title: 'Features2', href: '/features2' },
+  //     { title: 'Something2', href: '/something2' },
+  //     { title: 'Something else2', href: '/something-else2' },
+  //     { title: 'And something else2', href: '/and-something-else2' },
+  //   ],
+  // },
 ];
 
 export default function Footer() {
@@ -55,7 +52,7 @@ export default function Footer() {
             <FooterList key={singleItem.title} {...singleItem} />
           ))}
         </ListContainer>
-        <BottomBar>
+        {/* <BottomBar>
           <ShareBar>
             <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
               <a>
@@ -76,7 +73,7 @@ export default function Footer() {
             </NextLink>
           </ShareBar>
           <Copyright>&copy; Copyright 2021 My Saas Startup</Copyright>
-        </BottomBar>
+        </BottomBar> */}
       </Container>
     </FooterWrapper>
   );
@@ -104,8 +101,8 @@ function ListItem({ title, href }: SingleFooterListItem) {
 }
 
 const FooterWrapper = styled.div`
-  padding-top: 10rem;
-  padding-bottom: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
   background: rgb(var(--secondary));
   color: rgb(var(--textSecondary));
 `;
@@ -114,7 +111,7 @@ const ListContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 const ListHeader = styled.p`
