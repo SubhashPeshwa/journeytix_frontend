@@ -17,12 +17,12 @@ import { GlobalStyle } from 'components/GlobalStyles';
 import Navbar from 'components/Navbar';
 import NavigationDrawer from 'components/NavigationDrawer';
 import NewsletterModal from 'components/NewsletterModal';
-import WaveCta from 'components/WaveCta';
+// import WaveCta from 'components/WaveCta';
 import { NewsletterModalContextProvider, useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { NavItems } from 'types';
 
 const navItems: NavItems = [
-  { title: 'Generate Now', href: '/features', outlined: true },
+  { title: 'Generate Now', href: '/ticket-generator', outlined: true },
   { title: 'Blog', href: '/pricing' },
   { title: 'Contact', href: '/contact' }
   // { title: 'Sign up', href: '/sign-up', outlined: true },
@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ColorModeScript />
       <GlobalStyle />
       <Providers>
-        <Modals />
+        {/* <Modals /> */}
         <Navbar items={navItems} />
         <Component {...pageProps} />
         {/* <WaveCta /> */}

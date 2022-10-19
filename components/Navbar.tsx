@@ -68,6 +68,12 @@ export default function Navbar({ items }: NavbarProps) {
     <NavbarContainer hidden={isNavbarHidden} transparent={isTransparent}>
       <Content>
         <NextLink href="/" passHref>
+          <LogoWrapperSign>
+            {/* <Logo /> */}
+            J
+          </LogoWrapperSign>
+        </NextLink>
+        <NextLink href="/" passHref>
           <LogoWrapper>
             {/* <Logo /> */}
             JourneyTix
@@ -90,15 +96,15 @@ export default function Navbar({ items }: NavbarProps) {
 }
 
 function NavItem({ href, title, outlined }: SingleNavItem) {
-  const { setIsModalOpened } = useNewsletterModalContext();
+  // const { setIsModalOpened } = useNewsletterModalContext();
 
-  function showNewsletterModal() {
-    setIsModalOpened(true);
-  }
+  // function showNewsletterModal() {
+  //   setIsModalOpened(true);
+  // }
 
-  if (outlined) {
-    return <CustomButton onClick={showNewsletterModal}>{title}</CustomButton>;
-  }
+  // if (outlined) {
+  //   return <CustomButton onClick={showNewsletterModal}>{title}</CustomButton>;
+  // }
 
   return (
     <NavItemWrapper outlined={outlined}>
@@ -129,6 +135,27 @@ const HamburgerMenuWrapper = styled.div`
   }
 `;
 
+const LogoWrapperSign = styled.a`
+  display: flex;
+  // margin-right: auto;
+  text-decoration: none;
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  border-width:0.1em; 
+  border-style:solid; 
+  border-color:#FFFFFF;
+  padding: 0.27em 0.5em 0.27em 0.5em;
+
+  ${media('<=tablet')} {
+    font-size: 2.8rem;
+    margin-right: auto;
+  }
+
+  color: rgb(var(--logoColor));
+`;
+
 const LogoWrapper = styled.a`
   display: flex;
   margin-right: auto;
@@ -137,9 +164,11 @@ const LogoWrapper = styled.a`
   font-weight: bold;
   line-height: 1.1;
   letter-spacing: -0.03em;
+  padding-left: 0.7em;
 
   ${media('<=tablet')} {
-    font-size: 1.6rem;
+    display: none;
+    font-size: 2.8rem;
   }
 
   color: rgb(var(--logoColor));
@@ -149,7 +178,7 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
   background-color: ${(p) => (p.outlined ? 'rgb(var(--primary))' : 'transparent')};
   border-radius: 0.5rem;
   font-size: 1.3rem;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   line-height: 2;
 
   &:hover {

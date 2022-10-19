@@ -1,10 +1,10 @@
-import NextLink from 'next/link';
 import styled from 'styled-components';
 import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
 import HeroIllustration from 'components/HeroIllustation';
 import OverTitle from 'components/OverTitle';
+import BoardingPass from 'components/BoardingPass';
 import { media } from 'utils/media';
 
 export default function Hero() {
@@ -12,19 +12,20 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>GET A VERIFIED FLIGHT ITINERARY WITHIN 60 SECONDS</CustomOverTitle>
+        <CustomOverTitle>Get a verified flight itinerary within 60 seconds</CustomOverTitle>
         <Heading>Generate your flight itinerary for free</Heading>
         <Description>
           Quickly book a Flight Reservation for your Visa Application. It is no longer necessary to use Photoshop, just enter the flight details!
         </Description>
         <CustomButtonGroup>
           <Button>
-            Book Now <span>&rarr;</span>
+            Generate Now <span>&rarr;</span>
           </Button>
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
-        <HeroIllustration />
+        {/* <HeroIllustration /> */}
+        <BoardingPass />
       </ImageContainer>
     </HeroWrapper>
   );
@@ -65,6 +66,7 @@ const ImageContainer = styled.div`
   }
 
   ${media('<=desktop')} {
+    display: none;
     margin-top: 2rem;
     justify-content: center;
     svg {
@@ -88,14 +90,15 @@ const CustomOverTitle = styled(OverTitle)`
 `;
 
 const Heading = styled.h1`
-  font-size: 5.8rem;
+  font-size: 5.4rem;
   font-weight: bold;
   line-height: 1.1;
   margin-bottom: 4rem;
   letter-spacing: -0.03em;
 
   ${media('<=tablet')} {
-    font-size: 4.6rem;
-    margin-bottom: 2rem;
+    font-size: 4.2rem;
+    margin-bottom: 6rem;
+    letter-spacing: 0em;
   }
 `;

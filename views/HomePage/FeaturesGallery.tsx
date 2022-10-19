@@ -10,26 +10,26 @@ import { media } from 'utils/media';
 
 const TABS = [
   {
-    title: 'Find relevant media contacts - multiline title',
+    title: 'Frequent travel has never been easier',
     description:
-      '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
-    imageUrl: '/demo-illustration-3.png',
+      "<p>We make a legitimate, verifiable flight reservation on your behalf - and deliver it to your inbox in minutes. It's the smarter, cheaper way to travel with complete freedom.</p>",
+    imageUrl: '/1.jpg',
     baseColor: '249,82,120',
     secondColor: '221,9,57',
   },
   {
-    title: 'Another amazing feature',
+    title: 'Applying for a visa and need a flight itinerary?',
     description:
-      '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
-    imageUrl: '/demo-illustration-4.png',
+      "<p>Onward Ticket is a service that allows you to book a verified flight reservation for your visa application within a few seconds. It couldn't be easier.</p>",
+    imageUrl: '/2.jpg',
     baseColor: '57,148,224',
     secondColor: '99,172,232',
   },
   {
-    title: 'And yet... another truly fascinating feature',
+    title: "Can't buy a flight ticket because you don't have fixed travel plans?",
     description:
-      '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quidem ipsam ratione dicta quis cupiditate consequuntur laborum ducimus iusto velit.</p>',
-    imageUrl: '/demo-illustration-5.png',
+      "<p>Just pick your route, enter your details, and pay. You'll receive your flight reservation by email. Download your PDF reservation from our website. You will also receive a copy via email. It takes just minutes.</p>",
+    imageUrl: '/3.jpg',
     baseColor: '88,193,132',
     secondColor: '124,207,158',
   },
@@ -76,8 +76,8 @@ export default function FeaturesGallery() {
   return (
     <FeaturesGalleryWrapper>
       <Content>
-        <OverTitle>features</OverTitle>
-        <SectionTitle>What are you signing in for?</SectionTitle>
+        <OverTitle>Features</OverTitle>
+        <SectionTitle>Why get a fake flight itinerary?</SectionTitle>
       </Content>
       <GalleryWrapper>
         <TabsContainer>{tabsMarkup}</TabsContainer>
@@ -93,6 +93,11 @@ const FeaturesGalleryWrapper = styled(Container)`
   flex-direction: column;
   justify-content: center;
   margin-top: 10rem;
+
+  ${media('<=desktop')} {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
 `;
 
 const GalleryWrapper = styled.div`
@@ -150,6 +155,7 @@ const ImageContainer = styled.div<{ isActive: boolean }>`
   }
 
   ${media('<=desktop')} {
+    display: none;
     width: ${(p) => (p.isActive ? '100%' : '0')};
   }
 `;

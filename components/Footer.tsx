@@ -17,13 +17,13 @@ const footerItems: FooterItems = [
       { title: 'Cookies Policy', href: '/cookies-policy' },
     ],
   },
-  {
-    title: 'Product',
-    items: [
-      { title: 'Generate Itinerary', href: '/features' },
-      { title: 'Itinerary Features', href: '/something' },
-    ],
-  },
+  // {
+  //   title: 'Product',
+  //   items: [
+  //     { title: 'Generate Itinerary', href: '/features' },
+  //     { title: 'Itinerary Features', href: '/something' },
+  //   ],
+  // },
   {
     title: 'Knowledge',
     items: [
