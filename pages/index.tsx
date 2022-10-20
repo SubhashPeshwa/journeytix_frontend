@@ -15,7 +15,7 @@ import { getAllPosts } from 'utils/postsFetcher';
 import { EnvVars } from 'env';
 
 
-export default function Homepage({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Homepage({  }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
       <>
       <Head>
