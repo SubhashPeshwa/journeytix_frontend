@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import type {NextPage} from 'next'
 import styled from 'styled-components';
 import { media } from 'utils/media';
 import Button from './Button';
@@ -13,6 +14,7 @@ import Input from './Input';
 // import Navbar from './Navbar';
 // import { NavItems } from 'types';
 import BoardingPass from './BoardingPass';
+import OverTitle from 'components/OverTitle';
 
 export interface NewsletterModalProps {
   onClose: () => void;
@@ -42,7 +44,7 @@ export default function Form() {
                 <FormWrapper>
                 <FormContainer>
                         {/* <Title>Enter your flight details</Title> */}
-                        <H2Wraper>Flight Details</H2Wraper>
+                        <CustomOverTitle>Flight Details</CustomOverTitle>
                         <Row>
                             <CustomInput
                                 value={email}
@@ -65,38 +67,10 @@ export default function Form() {
                                 required
                             />
                         </Row>
-                        <H2Wraper>Personal Details</H2Wraper>
                         <Row>
-                            <CustomInputFull
-                                value={email}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-                                placeholder="Email Address"
-                                required
-                            />
-                        </Row>
-                        <Row>
-                            <CustomInput
-                                value={email}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-                                placeholder="Passenger First Name"
-                                required
-                            />
-                            <CustomInput
-                                value={email}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-                                placeholder="Passenger Last Name"
-                                required
-                            />
-                        </Row>
-                        <Row>
-                        <CustomButton as="button" type="submit">
-                            Add Passenger
-                        </CustomButton>
-                        </Row>
-                        <Row>
-                        <CustomButton as="button" type="submit">
-                            Submit
-                        </CustomButton>
+                          <CustomButton as="button" type="submit">
+                              Submit
+                          </CustomButton>
                         </Row>
                 </FormContainer>
                 <BoardingPass />
@@ -133,17 +107,8 @@ const FormContainer = styled.div`
   }
 `;
 
-const Title = styled.div`
-  font-size: 3.2rem;
-  font-weight: bold;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  text-align: center;
-  color: rgb(var(--text));
-
-  ${media('<=tablet')} {
-    font-size: 2.6rem;
-  }
+const CustomOverTitle = styled(OverTitle)`
+  margin-bottom: 2rem;
 `;
 
 const Row = styled.div`

@@ -70,7 +70,7 @@ export default function BoardingPass() {
 }
 
 const ContainerWrapper = styled.div`
-    border-radius: 2em;
+    border-radius: 2.7em;
     display: flex;
     flex-direction: column;
     width: 40em;
@@ -81,7 +81,7 @@ const ContainerWrapper = styled.div`
     align-items: center;
     justify-content: center;
     // min-height: 80vh;
-    height: 40em;
+    height: 100%;
     margin: 0;
 
 `;
